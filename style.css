@@ -1,0 +1,131 @@
+body 
+{
+    font: 20px Helvetica;
+    background: black;
+}
+
+#main 
+{
+    min-height: 525px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-flow: row;
+}
+
+#main > article 
+{
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #8888bb;
+    border-radius: 7pt;
+    background:black;
+    color: white;
+    flex: 3 1 60%;
+    order: 2;
+}
+
+#main > nav 
+{
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #8888bb;
+    border-radius: 7pt;
+    width: 230px;
+    order: 1;
+    background:black;
+    color: white;
+}
+
+#main > aside 
+{
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #8888bb;
+    border-radius: 7pt;
+    background:black;
+    color: white;
+    width: 225px;
+    order: 3;
+}
+
+textarea 
+{
+    margin: 4px;
+    padding: 5px;
+    min-height: 100px;
+    border: 1px solid #8888bb;
+    border-radius: 7pt;
+    background:black;
+    color: white;
+    width : 98%;
+}
+
+nmeaarea 
+{
+    display: block;
+    margin: 4px;
+    padding: 5px;
+    min-height: 30px;
+    border: 1px solid #8888bb;
+    border-radius: 7pt;
+    background:black;
+    color: white;
+}
+
+header, footer 
+{
+    text-align: center;
+    display: block;
+    margin: 4px;
+    padding: 5px;
+    min-height: 30px;
+    border: 1px solid #8888bb;
+    border-radius: 7pt;
+    background:black;
+    color: white;
+}
+
+th
+{
+    text-align:left;
+}
+
+button
+{
+    font-size: 30px;
+    width: 120px;
+    margin: 10px;
+}
+
+progress::-moz-progress-bar 
+{
+    background-color: CadetBlue;
+}
+
+button:hover 
+{
+    background-color: #8888bb;
+}
+
+
+/* Too narrow to support three columns */
+@media all and (max-width: 640px) 
+{
+    #main, #page 
+    {
+        flex-direction: column;
+    }
+
+    #main > article, #main > nav, #main > aside 
+    {
+    /* Return them to document order */
+        order: 0;
+    }
+
+    #main > nav, #main > aside, header, footer
+    {
+        min-height: 120px;
+        max-height: 120px;
+    }
+}

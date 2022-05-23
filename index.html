@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mount Carmel High HAB Dashboard</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header>
+        <h4>Mount Carmel High HAB Dashboard V1.0</h4>
+        <div id="callID"></div>
+    </header>
+    <div id='main'>
+      <article id="map">
+      </article>
+      <nav>
+        <table>
+          <tr>
+            <button onclick="myMap()">Map</button>
+          </tr>
+          <tr>
+            <button onclick="sendAPRS()">APRS</button>
+          <tr>
+            <button onclick="displayImages()">Images</button>
+          </tr>
+          <tr>
+            <th id="rssiGW1Label">GW1 Gene QTH</th>
+            <td id="rssiGW1"></td>
+          </tr>
+          <tr>
+            <th id="rssiGW2Label">GW2 Randy QTH</th>
+            <td id="rssiGW2"></td>
+          </tr>
+          <tr>
+            <th id="rssiGW3Label">GW3 David QTH</th>
+            <td id="rssiGW3"></td>
+          </tr>
+          <tr>
+            <th id="rssiGW4Label">GW4 Otay</th>
+            <td id="rssiGW4"></td>
+          </tr>
+          <tr>
+            <th id="rssiGW5Label">GW5 Gene Rover</th>
+            <td id="rssiGW5"></td>
+          </tr>
+          <tr>
+            <th id="rssiGW6Label">GW6 David Rover</th>
+            <td id="rssiGW6"></td>
+          </tr>
+          <tr>
+            <th id="rssiGW7Label">GW7 KK6NOW</th>
+            <td id="rssiGW7"></td>
+          </tr>
+          <tr>
+            <th id="rssiGW8Label">GW8 Toro</th>
+            <td id="rssiGW8"></td>
+          </tr>
+          <tr>
+            <th id="rssiGW9Label">GW9 MCHS</th>
+            <td id="rssiGW9"></td>
+          </tr>
+          <tr>
+            <th id="rssiGW10Label">GW10 Test</th>
+            <td id="rssiGW10"></td>
+          </tr>
+        </table>
+      </nav>
+      <aside>
+        <table>
+            <tr>
+                <th>Time</th>
+                <td id="GPSTimeID"></td>
+            </tr>
+            <tr>
+                <th>Latitude</th>
+                <td id="latID"></td>
+            </tr>
+            <tr>
+                <th>Longitude</th>
+                <td id="lonID"></td>
+            </tr>
+            <tr>
+                <th>Altitude</th>
+                <td id="altID"></td>
+            </tr>
+            <tr>
+                <th>Speed</th>
+                <td id="speedID"></td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td id="statusID"></td>
+            </tr>
+            <tr>
+                <th>Satellites</th>
+                <td id="SatellitesID"></td>
+            </tr>
+            <tr>
+                <th>Battery</th>
+                <td id="BatteryID"></td>
+            </tr>
+            <tr>
+                <th>Int Temp</th>
+                <td id="IntTemperatureID"></td>
+            </tr>
+            <tr>
+                <th>Ext Temp</th>
+                <td id="ExtTemperatureID"></td>
+            </tr>
+            <tr>
+                <th>Pressure</th>
+                <td id="PressureID"></td>
+            </tr>
+            <tr>
+                <th>Humidity</th>
+                <td id="HumidityID"></td>
+            </tr>
+        </table>
+      </aside>
+    </div>
+    <textarea id="textareaID">	
+    </textarea>
+    <footer>
+      <a href="https://www.powayusd.com/en-US/Schools/HS/MCHS/HOME">Mount Carmel High</a>
+    </footer>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+  </body>
+</html>
