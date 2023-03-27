@@ -33,11 +33,11 @@ var FTP_PORT_PASV_MAX = 8110;
 var gps        = new GPS;
 var GPSCount   = 1;
 
-var APRS_CALL      = "WB9COY-6"
+var APRS_CALL      = "NOCALL-6"
 var APRS_SYMBOL    = "I"
-var APRS_Comment   = "Mount Carmel Flight #00"
-var APRS_UserName  = "WB9COY"
-var APRS_Password  = "21178"
+var APRS_Comment   = "Flight #00"
+var APRS_UserName  = "NOCALL"
+var APRS_Password  = "youraprs password"
 var APRS_BeconTime = 1
 var APRSclient     = new net.Socket();
 var APRSLogin      = "user " + APRS_UserName + " pass " + APRS_Password + " vers 1.0" + "\n";
