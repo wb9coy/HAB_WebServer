@@ -20,12 +20,12 @@ var parser     = null;
 var HOST       = null;
 //var HOST_ADDR  = "99.21.194.65"
 //var HOST_ADDR  = "172.4.32.222"
-var HOST_ADDR  = "192.169.177.148"
+var HOST_ADDR  = "my server IP address"
 
 var HTTP_PORT  = 8080;
 var GW_PORT    = 8081;
 
-var FTP_CTL_ADDR      = "192.169.177.148"
+var FTP_CTL_ADDR      = "my server IP address"
 var FTP_PORT          = 8082;
 var FTP_PORT_PASV_MIN = 8083;
 var FTP_PORT_PASV_MAX = 8110;
