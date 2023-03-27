@@ -18,8 +18,7 @@ var fifoWs     = null;
 var parser     = null;
 //var GPSJSON    = null;
 var HOST       = null;
-//var HOST_ADDR  = "99.21.194.65"
-//var HOST_ADDR  = "172.4.32.222"
+
 var HOST_ADDR  = "my server IP address"
 
 var HTTP_PORT  = 8080;
