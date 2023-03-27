@@ -125,6 +125,7 @@ connTimerObjs.push(setInterval(function(){connTimeout(7)},GW_TIMEOUT));
 connTimerObjs.push(setInterval(function(){connTimeout(8)},GW_TIMEOUT));
 connTimerObjs.push(setInterval(function(){connTimeout(9)},GW_TIMEOUT));
 connTimerObjs.push(setInterval(function(){connTimeout(10)},GW_TIMEOUT));
+connTimerObjs.push(setInterval(function(){connTimeout(11)},GW_TIMEOUT));
 
 rssiTimerObjs.push(setInterval(function(){rssiTimeout(1)},RSSI_TIMEOUT));
 rssiTimerObjs.push(setInterval(function(){rssiTimeout(2)},RSSI_TIMEOUT));
@@ -136,6 +137,8 @@ rssiTimerObjs.push(setInterval(function(){rssiTimeout(7)},RSSI_TIMEOUT));
 rssiTimerObjs.push(setInterval(function(){rssiTimeout(8)},RSSI_TIMEOUT));
 rssiTimerObjs.push(setInterval(function(){rssiTimeout(9)},RSSI_TIMEOUT));
 rssiTimerObjs.push(setInterval(function(){rssiTimeout(10)},RSSI_TIMEOUT))
+rssiTimerObjs.push(setInterval(function(){rssiTimeout(11)},RSSI_TIMEOUT))
+
 
 function connTimeout(gw)
 {
@@ -392,10 +395,17 @@ gatewayServer.on('connection', function (gatewayClient)
         splitMessage = strMessage.split('$G')
         if(splitMessage[0] == '')
         {
-        	if (!gps.update(message+'\n'+'\r'))
-          	{
-            	console.log("Error with GPS update" + message);
-          	}
+          try 
+          {
+            if (!gps.update(message+'\n'+'\r'))
+            {
+              console.log("Error with GPS update" + message);
+            }
+          }
+          catch(e)
+          {
+            console.log(e);
+          }
         }
         else
         {
